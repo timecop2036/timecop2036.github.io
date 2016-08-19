@@ -1,0 +1,25 @@
+<html>
+<body>
+<script type="text/javascript" src="https://l2.io/ip.js?var=e"></script>
+<div id="a">test</div>
+<script>
+var x = document.getElementById("a");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+function showIP() {
+    x.innerHTML = x.innerHTML + "<br/>IP: " + e;
+}
+function showPosition(p) {
+    x.innerHTML = x.innerHTML + "<br/>(" + p.coords.latitude + ", " + p.coords.longitude + ")";
+}
+showIP();
+getLocation();
+</script>
+</body>
+</html>
+
