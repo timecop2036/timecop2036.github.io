@@ -4,21 +4,19 @@
 <div id="a">test</div>
 <script>
 var x = document.getElementById("a");
-function getLocation() {
+function b() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("Geolocation is not supported by this browser.");
+        navigator.geolocation.getCurrentPosition(c);
     }
 }
-function showIP() {
-    x.innerHTML = x.innerHTML + "<br/>IP: " + e;
+function a() {
+    x.innerHTML = x.innerHTML + "<br/>" + e;
 }
-function showPosition(p) {
+function c(p) {
     x.innerHTML = x.innerHTML + "<br/>(" + p.coords.latitude + ", " + p.coords.longitude + ")";
 }
-showIP();
-getLocation();
+a();
+b();
 </script>
 </body>
 </html>
